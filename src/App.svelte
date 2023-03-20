@@ -98,7 +98,7 @@ const trueAnswer = (correct_answer) => {
   <div class="backdrop">
     <div class="trueModal">
       <h2>That is correct!</h2>
-      <button on:click={closeModal}>Dismiss</button>
+      <button class="closeButton" on:click={closeModal}>Dismiss</button>
     </div>
   </div>
 {/if}
@@ -107,7 +107,7 @@ const trueAnswer = (correct_answer) => {
   <div class="backdrop">
     <div class="falseModal">
       <h2>Oh no... Thats wrong</h2>
-      <button on:click={closeModal}>Dismiss</button>
+      <button class="closeButton" on:click={closeModal}>Dismiss</button>
     </div>
   </div>
 {/if}
@@ -116,7 +116,7 @@ const trueAnswer = (correct_answer) => {
   <div class="backdrop">
     <div class="falseModal">
       <h2>Wrong answer... you also have no points</h2>
-      <button on:click={closeModal}>Dismiss</button>
+      <button class="closeButton" on:click={closeModal}>Dismiss</button>
     </div>
   </div>
 {/if}
@@ -187,7 +187,7 @@ const trueAnswer = (correct_answer) => {
           <button class="falseButton" on:click={() => falseAnswer(question.correct_answer)}>False</button>  
       </div>
       <!-- <pre>{JSON.stringify(results, null, 2)}</pre> -->
-      <button class:hide={anotherGame} on:click={newGame}>Wanna play another Game?</button>
+      <button class="replayButton" class:hide={anotherGame} on:click={newGame}>Wanna play another Game?</button>
     {/each}
   {/if}
 
